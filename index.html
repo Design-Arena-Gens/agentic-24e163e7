@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulateur de prêt</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <h1>Simulateur de prêt</h1>
+        <form id="loan-form" class="form-grid">
+          <label for="amount">Montant emprunté (€)</label>
+          <input id="amount" name="amount" type="number" min="0" step="100" required />
+
+          <label for="rate">Taux d'intérêt annuel (%)</label>
+          <input id="rate" name="rate" type="number" min="0" step="0.01" required />
+
+          <label for="terms">Nombre de mensualités</label>
+          <input id="terms" name="terms" type="number" min="1" step="1" required />
+
+          <button type="submit">Calculer</button>
+        </form>
+        <div id="summary" class="summary hidden">
+          <h2>Résultats</h2>
+          <p><strong>Mensualité:</strong> <span id="monthly-payment">-</span></p>
+          <p><strong>Total remboursé:</strong> <span id="total-paid">-</span></p>
+          <p><strong>Total intérêts:</strong> <span id="total-interest">-</span></p>
+        </div>
+      </section>
+      <section class="card table-card">
+        <h2>Tableau d'amortissement</h2>
+        <div class="table-wrapper">
+          <table id="amortization-table">
+            <thead>
+              <tr>
+                <th>Mois</th>
+                <th>Mensualité</th>
+                <th>Intérêts</th>
+                <th>Capital</th>
+                <th>Capital restant</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

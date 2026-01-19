@@ -1,0 +1,138 @@
+:root {
+  color-scheme: light dark;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background: radial-gradient(circle at top, #fefefe 0%, #dedede 100%);
+  color: #1c1c1c;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+}
+
+.card h1,
+.card h2 {
+  margin-top: 0;
+  color: #0f172a;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-grid label {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.form-grid input {
+  padding: 0.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-grid input:focus {
+  outline: 3px solid rgba(37, 99, 235, 0.2);
+  border-color: rgb(37, 99, 235);
+}
+
+.form-grid button {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #2563eb, #9333ea);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-grid button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.3);
+}
+
+.summary {
+  margin-top: 2rem;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.table-card {
+  overflow: hidden;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  max-height: 500px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  text-align: right;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background: rgba(248, 250, 252, 0.95);
+  text-align: center;
+  color: #1e293b;
+}
+
+tbody tr:nth-child(odd) {
+  background: rgba(248, 250, 252, 0.6);
+}
+
+tbody td:first-child,
+thead th:first-child {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .table-wrapper {
+    max-height: 350px;
+  }
+}
